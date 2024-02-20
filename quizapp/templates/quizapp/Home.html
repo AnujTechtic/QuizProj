@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">Welcome to Quiz Application</h5>
+      <p class="card-text">You are for?</p>
+      <a href="{% url 'quizView' %}" class="btn btn-dark">To Attend a Quiz</a>
+      <a href="{% url 'facultyLogin' %}" class="btn btn-dark">To Create a Quiz</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>List of Quiz Available</h1>
+    <table border="1">
+        
+        
+        <tr>
+            <th>ID</th>
+            <th>Quiz Date</th>
+            <th>Total Question</th>
+            <th>Total Marks</th>
+            {% for quiz in quizs %}
+        </tr>
+        <tr>
+            <!-- <td>{{quiz.id}}</td> -->
+            <td>{{quiz.date}}</td>
+            <td>{{quiz.total_questions}}</td>
+            <td>{{quiz.total_marks}}</td>     
+            <td><a href="studentRegister/{{quiz.id}}" class="btn btn-dark">Start the Quiz</a></td>
+        </tr>
+            
+        
+        {% endfor %} 
+    </table>
+    
+{% endblock %}

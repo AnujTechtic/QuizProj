@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>Faculty Login</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.name.label}}{{form.name}} <br>
+  {{form.email.label}}{{form.email}} <br>
+  <input type="submit" value="Submit" class="btn btn-dark">
+</form><br>
+<a href="" class="btn btn-dark">Already Registerd?</a>
+{% endblock %}

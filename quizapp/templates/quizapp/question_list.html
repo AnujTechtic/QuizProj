@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>List of Question</h1>
+    <table border="1">      
+        
+        <tr>
+            <th>ID</th>
+            <th>Quiz Id</th>
+            <th>Question</th>
+            <th>Options</th>
+            {% for quetion in quetions %}
+        </tr>
+        <tr>
+
+        </tr>
+        <tr>
+            <td>{{quetion.id}}</td>
+            <td>{{quizs}}</td>
+            <td>{{quetion.question}}</td>
+            <td><ul>
+                {{quetion.option_1}} 
+                    {{quetion.option_2}} 
+                    {{quetion.option_3}} 
+                    {{quetion.option_4}}               
+            </ul></td>
+
+            <!-- <td>{{quetion.quiz}}</td>     
+            <td><a href=" " class="btn btn-dark">Start the Quiz</a></td> -->
+        </tr>
+            
+        
+        {% endfor %} 
+    </table>
+    
+{% endblock %}

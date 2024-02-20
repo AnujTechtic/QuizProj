@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>Registration Form </h1>
+<form action="" method="post">
+  {% csrf_token %}
+
+  <ul>
+    <li>{{form.date.label}} {{form.date}}</li>
+    <li>{{form.total_questions.label}} {{form.total_questions}}</li>
+    <li>{{form.total_marks.label}} {{form.total_marks}}</li>  
+  </ul> 
+
+  <input type="submit" value="Submit" class="btn btn-dark">
+</form>
+{% endblock %}

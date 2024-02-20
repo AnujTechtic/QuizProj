@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<h1>Type Your Question Here</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.question.label}}
+  {{form.question}}
+  <ul>
+    <li>{{form.option_1.label}} {{form.option_1}}</li>
+    <li>{{form.option_2.label}} {{form.option_2}}</li>
+    <li>{{form.option_3.label}} {{form.option_3}}</li>
+    <li>{{form.option_4.label}} {{form.option_4}}</li>
+    <li>{{form.correct_option.label}} {{form.correct_option}}</li>
+    <li>{{form.quiz}}</li>
+  </ul>  
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
